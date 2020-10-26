@@ -64,6 +64,7 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 with dronecamera.DroneCamera(resolution='640x480', framerate=24) as camera:
+    
     camera.start()
     output = camera.stream_output
     try:
