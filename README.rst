@@ -1,5 +1,5 @@
 =========
-mypackage
+KMXKUN002-EEE3097S-dronecamera
 =========
 
 
@@ -16,11 +16,11 @@ mypackage
 
 
 
-mypackage
+KMXKUN002-EEE3097S-dronecamera
 
 
 * Free software: MIT license
-* Documentation: https://mypackage.readthedocs.io.
+* Documentation: https://KMXKUN002-EEE3097S-dronecamera.readthedocs.io.
 
 Install
 --------
