@@ -9,5 +9,4 @@ Development Lead
 
 Contributors
 ------------
-Chris Kim
-None yet. Why not be the first?
+Author-email: "C. Kim" <KMXKUN002@myuct.ac.za>

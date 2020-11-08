@@ -17,8 +17,8 @@ setup_requirements = [ ]
 test_requirements = [ ]
 
 setup(
-    author="yes",
-    author_email='Chris Kim',
+    author="Chris Kim",
+    author_email='KMXKUN002@myuct.ac.za',
     python_requires='>=3.5',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="mypackage",
+    description="EEE3097S API project",
     entry_points={
         'console_scripts': [
             'mypackage=mypackage.cli:main',
@@ -39,10 +39,9 @@ setup(
     },
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='mypackage',
-    name='mypackage',
+    name='KMXKUN002-3097S-DroneCamera',
     packages=find_packages(include=['mypackage', 'mypackage.*']),
     setup_requires=setup_requirements,
     test_suite='tests',
