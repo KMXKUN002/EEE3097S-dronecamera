@@ -26,12 +26,44 @@ mypackage
 Features
 --------
 
-* TODO
+This API uses the class DroneCamera from dronecamera.py.
+
+Methods:
+        __enter__() -- Initialises a 640x480 video stream. Resolution may be 
+                modified in code.
+
+        __exit__() -- Cleanly exits the program, ending the connection to the 
+                camera.
+
+        frames() -- Creates a buffer into which the camera constantly feeds 
+                its frames.
+
+        frame() -- Retrieves the first frame in the buffer.
+
+        set_zoom(int zoom) -- Set a zoom level. This zoom value may range 
+                from 0 to 100.
+
+        get_zoom() -- Get zoom level that ranges from 0 to 100.
+
+        set_coordinates(x, y) -- Sets the x- and y-coordinates of the drone.
+
+        get_x_coordinate() -- Returns the x-coordinate.
+
+        get_y_coordinate() -- Returns the y-coordinate.
+
+        get_coordinates() -- Returns both x- and y-coordinates in an array.
+
+To instantiate an object, write: 
+        variable_name = DroneCamera().__enter__()
+
+When the program ends, the connection to the camera will automatically end as 
+well. 
 
 Credits
 -------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+The API is an extension of the PiCamera package, which is a copyright of Dave Jones.
