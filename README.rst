@@ -22,6 +22,13 @@ mypackage
 * Free software: MIT license
 * Documentation: https://mypackage.readthedocs.io.
 
+Install
+--------
+In terminal, run
+	pip install KMXKUN002-3097S-dronecamera
+
+Instantiate with,
+	camera = DroneCamera.__enter__()
 
 Features
 --------
@@ -52,9 +59,6 @@ Methods:
         get_y_coordinate() -- Returns the y-coordinate.
 
         get_coordinates() -- Returns both x- and y-coordinates in an array.
-
-To instantiate an object, write: 
-        variable_name = DroneCamera().__enter__()
 
 When the program ends, the connection to the camera will automatically end as 
 well. 
