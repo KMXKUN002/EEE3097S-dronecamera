@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Raspberry Pi Camera Demonstrator!</title>
+        <script>
+            window.onload = function() {
+                var zoomSlider = document.getElementById("zoom");
+
+                function putSliderValue(value) {
+                    var zoomReq = new XMLHttpRequest();
+                    zoomReq.open("PUT", "/api/zoom", true);
+                    zoomReq.setRequestHeader('Content-Type', 'application/json');
+                    zoomReq.send(value);
+                }
+
+                zoomSlider.onchange = function() {
+                    putSliderValue(this.value);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center><h1>Raspberry Pi Camera Demonstrator</h1></center>
+        <center><img src="stream.mjpg" width="640" height="480"></center>
+        <center>
+            <input id="zoom" type="range" min="0" max="100">
+            <a id="download" href="/capture" download>Capture</a>
+        </center>
+    </body>
+</html>

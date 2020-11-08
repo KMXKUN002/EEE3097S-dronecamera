@@ -9,5 +9,5 @@ Development Lead
 
 Contributors
 ------------
-
+Chris Kim
 None yet. Why not be the first?
