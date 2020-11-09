@@ -42,30 +42,35 @@ The existing method capture() is used to capture frames from the camera into
  a livestream.
 
 Methods:
-        __enter__() -- Initialises a 640x480 video stream. Resolution may be 
-                modified in code.
+        __enter__()
+            Initialises a 640x480 video stream. Resolution may be modified in code.
 
-        __exit__() -- Cleanly exits the program, ending the connection to the 
-                camera.
+        __exit__()
+            Cleanly exits the program, ending the connection to the camera.
 
-        frames() -- Creates a buffer into which the camera constantly feeds 
-                its frames.
+        frames() 
+            Creates a buffer into which the camera constantly feeds its frames.
 
-        frame() -- Retrieves the first frame in the buffer. Use this to make
-                either a snapshot or a livestream.
+        frame()
+            Retrieves the first frame in the buffer. Use this to make either a snapshot or a livestream.
 
-        set_zoom(int zoom) -- Set a zoom level. This zoom value may range 
-                from 0 to 100. This is not an actual zoom; it is a crop.
+        set_zoom(int zoom)
+            Set a zoom level. This zoom value may range from 0 to 100. This is not an actual zoom; it is a crop.
 
-        get_zoom() -- Get zoom level that ranges from 0 to 100.
+        get_zoom()
+            Get zoom level that ranges from 0 to 100.
 
-        set_coordinates(x, y) -- Sets the x- and y-coordinates of the drone.
+        set_coordinates(x, y)
+            Sets the x- and y-coordinates of the drone.
 
-        get_x_coordinate() -- Returns the x-coordinate.
+        get_x_coordinate()
+            Returns the x-coordinate.
 
-        get_y_coordinate() -- Returns the y-coordinate.
+        get_y_coordinate() 
+            Returns the y-coordinate.
 
-        get_coordinates() -- Returns both x- and y-coordinates in an array.
+        get_coordinates() 
+            Returns both x- and y-coordinates in an array.
 
 When the program ends, the connection to the camera will automatically end as 
 well.
