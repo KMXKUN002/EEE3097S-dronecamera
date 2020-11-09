@@ -35,6 +35,12 @@ Features
 
 This API uses the class DroneCamera from dronecamera.py.
 
+The class DroneCamera uses its attribute camera:PiCamera.
+
+The existing method capture() is used to capture frames from the camera into
+ a byte buffer. The frames from this buffer can be called by the user to get 
+ a livestream.
+
 Methods:
         __enter__() -- Initialises a 640x480 video stream. Resolution may be 
                 modified in code.
@@ -45,10 +51,11 @@ Methods:
         frames() -- Creates a buffer into which the camera constantly feeds 
                 its frames.
 
-        frame() -- Retrieves the first frame in the buffer.
+        frame() -- Retrieves the first frame in the buffer. Use this to make
+                either a snapshot or a livestream.
 
         set_zoom(int zoom) -- Set a zoom level. This zoom value may range 
-                from 0 to 100.
+                from 0 to 100. This is not an actual zoom; it is a crop.
 
         get_zoom() -- Get zoom level that ranges from 0 to 100.
 
@@ -61,7 +68,18 @@ Methods:
         get_coordinates() -- Returns both x- and y-coordinates in an array.
 
 When the program ends, the connection to the camera will automatically end as 
-well. 
+well.
+
+Usage
+--------
+Use frames() to create a buffer into which the camera writes its frames.
+Use frame(), which returns the first item in the buffer, to make a livestream
+ or snapshot.
+
+Set and get the coordinates of your drone with set_coordinates(x, y) and 
+ get_x_coordinate().
+
+Set and get zoom levels with set_zoom(zoom) and get_zoom(). This wil
 
 Credits
 -------
